@@ -116,8 +116,17 @@
 #   define VCL_GCC_102
 #  elif (__GNUC_MINOR__ > 0 )
 #   define VCL_GCC_101
+#  endif
+# elif (__GNUC__==13)
+#  define VCL_GCC_13
+#  if (__GNUC_MINOR__ > 2 )
+#   define VCL_GCC_133
+#  elif (__GNUC_MINOR__ > 1 )
+#   define VCL_GCC_132
+#  elif (__GNUC_MINOR__ > 0 )
+#   define VCL_GCC_131
 #  else
-#   define VCL_GCC_100
+#   define VCL_GCC_130
 #  endif
 # else
 #  error "Dunno about this gcc"
